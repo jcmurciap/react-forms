@@ -49,16 +49,34 @@ const FormikBasicPage = () => {
             <h1>Formik basic tutorial</h1>
             <form noValidate onSubmit={handleSubmit}>
                 <label htmlFor="firstName">First Name</label>
-                <input type="text" name="firstName" onChange={handleChange} value={values.firstName} onBlur={handleBlur}/>
-                { touched.firstName && errors.firstName && <span>{errors.firstName}</span> }
+                <input
+                    type="text"
+                    name="firstName"
+                    onChange={handleChange}
+                    value={values.firstName}
+                    onBlur={handleBlur}
+                />
+                {touched.firstName && errors.firstName && <span>{errors.firstName}</span>}
 
                 <label htmlFor="lastName">Last Name</label>
-                <input type="text" name="lastName" onChange={handleChange} value={values.lastName} onBlur={handleBlur}/>
-                { touched.lastName && errors.lastName && <span>{errors.lastName}</span> }
+                <input
+                    type="text"
+                    name="lastName"
+                    onChange={handleChange}
+                    value={values.lastName}
+                    onBlur={handleBlur}
+                />
+                {touched.lastName && errors.lastName && <span>{errors.lastName}</span>}
 
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" onChange={handleChange} value={values.email} onBlur={handleBlur}/>
-                { touched.email && errors.email && <span>{errors.email}</span> }
+                <input
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    value={values.email}
+                    onBlur={handleBlur}
+                />
+                {touched.email && errors.email && <span>{errors.email}</span>}
 
                 <button type="submit">Submit</button>
             </form>
