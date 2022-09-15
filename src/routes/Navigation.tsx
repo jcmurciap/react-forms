@@ -4,6 +4,7 @@ import {RegisterPage} from "../forms/pages/RegisterPage";
 import FormikBasicPage from "../forms/pages/FormikBasicPage";
 import FormikYupPage from "../forms/pages/FormikYupPage";
 import FormikComponents from "../forms/pages/FormikComponents";
+import FormikAbstraction from "../forms/pages/FormikAbstraction";
 
 export const Navigation = () => {
     return (
@@ -25,16 +26,20 @@ export const Navigation = () => {
                             <NavLink to="/formik-components" className={({isActive}) => isActive ? 'nav-active' : ''}>Formik Components</NavLink>
                         </li>
                         <li>
+                            <NavLink to="/formik-abstraction" className={({isActive}) => isActive ? 'nav-active' : ''}>Formik Abstraction</NavLink>
+                        </li>
+                        <li>
                             <NavLink to="/users" className={({isActive}) => isActive ? 'nav-active' : ''}>Users</NavLink>
                         </li>
                     </ul>
                 </nav>
                 <Routes>
-                    <Route path="formik-basic" element={<FormikBasicPage />} />
-                    <Route path="users" element={<h1>Users</h1>} />
-                    <Route path="register" element={<RegisterPage />} />
-                    <Route path="formik-yup" element={<FormikYupPage />} />
-                    <Route path="formik-components" element={<FormikComponents />} />
+                    <Route path="formik-basic" element={<FormikBasicPage/>}/>
+                    <Route path="users" element={<h1>Users</h1>}/>
+                    <Route path="register" element={<RegisterPage/>}/>
+                    <Route path="formik-yup" element={<FormikYupPage/>}/>
+                    <Route path="formik-components" element={<FormikComponents/>}/>
+                    <Route path="formik-abstraction" element={<FormikAbstraction/>}/>
 
                     {/*Rutas no validas*/}
                     <Route path={"/*"} element={<Navigate to="/register" replace/>} />
